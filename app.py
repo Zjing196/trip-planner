@@ -8,27 +8,6 @@ import streamlit as st
 
 st.set_page_config(page_title="AI Travel Companion", page_icon="🧸", layout="wide", initial_sidebar_state="collapsed")
 
-st.markdown("""
-<style>
-.stApp {
-    background-color: #ffffff !important;
-}
-.stApp p, .stApp div, .stApp span, .stApp label, .stMarkdown {
-    color: #000000 !important;
-}
-.stTextInput label, .stTextArea label, .stSelectbox label, .stDateInput label, .stNumberInput label {
-    color: #000000 !important;
-}
-input, textarea {
-    background: #fff !important;
-    color: #000 !important;
-}
-.st-c8, .st-c9, .st-ca, .st-cb {
-    color: #000000 !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 ENDPOINT = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
 MODEL_ID = os.getenv("ARK_MODEL_ID", "")
 ARK_API_KEY = os.getenv("ARK_API_KEY", "")
