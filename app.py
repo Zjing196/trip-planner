@@ -549,17 +549,17 @@ Mark uncertain opening hours or prices as unconfirmed. Understand Indonesian tra
 such as departure point, opening hours, charter bus, and sleeping at the airport. Ensure every
 string is valid JSON, escape embedded quotation marks, and do not truncate the JSON object.
 """
-    headers = {"Authorization": f"Bearer {ARK_API_KEY}", "Content-Type": "application/json"}
-     payload = {
-        "model": MODEL_ID,
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": text},
-        ],
-        "temperature": 0.1,
-        "response_format": {"type": "json_object"},
-        "max_tokens": 4096
-    }
+headers = {"Authorization": f"Bearer {ARK_API_KEY}", "Content-Type": "application/json"}
+payload = {
+    "model": MODEL_ID,
+    "messages": [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": text},
+    ],
+    "temperature": 0.1,
+    "response_format": {"type": "json_object"},
+    "max_tokens": 4096
+}
 
     response = requests.post(ENDPOINT, headers=headers, json=payload, timeout=60)
     response.raise_for_status()
