@@ -8,10 +8,6 @@ import streamlit as st
 
 APP_ICON = os.path.join(os.path.dirname(__file__), "static", "apple-touch-icon.png")
 st.set_page_config(page_title="AI Travel Companion", page_icon=APP_ICON, layout="wide", initial_sidebar_state="collapsed")
-st.markdown(
-    '<link rel="apple-touch-icon" sizes="180x180" href="/app/static/apple-touch-icon.png">',
-    unsafe_allow_html=True,
-)
 
 ENDPOINT = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
 MODEL_ID = os.getenv("ARK_MODEL_ID", "")
