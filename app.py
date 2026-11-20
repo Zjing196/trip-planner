@@ -147,7 +147,7 @@ st.markdown(
         radial-gradient(circle at 92% 18%, rgba(255, 213, 224, .66), transparent 32%),
         linear-gradient(135deg, #f8dff0 0%, #e4d8f8 46%, #f9e6d9 100%);
     }
-    [data-testid="stHeader"] { background: rgba(255, 239, 247, .58); }
+    [data-testid="stHeader"] { display: none !important; }
     .block-container { max-width: 1050px; padding: 3.5rem 1rem 5rem; }
     h1, h2, h3 { color: #30204f; letter-spacing: -.025em; }
     [data-testid="stSidebar"], [data-testid="stExpandSidebarButton"] { display: none !important; }
