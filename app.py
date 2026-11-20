@@ -22,14 +22,13 @@ if not MODEL_ID or not ARK_API_KEY:
 
 TEXT = {
     "zh": {
-        "title": "你好，周梦媛公主", "subtitle": "把想去的地方交给 AI，一起把旅程安排得从容又清晰。",
+        "title": "你好，Jessie公主", "subtitle": "把想去的地方交给 AI，一起把旅程安排得从容又清晰。",
         "tab_import": "✈️  AI 对话", "tab_itinerary": "🧭  每日行程", "tab_progress": "✓  旅程进度",
         "tab_settings": "⚙️  设置", "settings_title": "偏好设置",
         "nav_itinerary": "每日行程", "nav_progress": "旅程进度", "nav_settings": "设置", "back_to_chat": "返回",
         "language_label": "界面语言", "language_help": "选择你偏好的界面显示语言。",
         "import_title": "你好，我是你的旅行搭子", "import_desc": "告诉我你想去哪、什么时候出发，我来帮你把旅程安排得轻松又清楚。",
         "placeholder": "聊聊你想去的地方、日期、预算或旅行偏好…",
-        "chat_reply": "收到，我已经整理好这版行程啦。你可以继续告诉我想调整的地方，或去「每日行程」查看详情。",
         "missing_api": "请先在环境变量或 Streamlit secrets 中配置 ARK_API_KEY 和 ARK_MODEL_ID，再使用 AI 解析。",
         "waiting": "正在为你整理旅程，请稍候……", "parse_ok": "行程已准备好，去「每日行程」看看吧。",
         "parse_error": "行程解析失败", "configure": "配置说明：在环境变量或 Streamlit secrets 中设置 ARK_API_KEY 和 ARK_MODEL_ID。",
@@ -44,12 +43,12 @@ TEXT = {
         "done_count": "已完成", "left_count": "待完成", "completion": "完成率", "checklist": "旅程打卡",
         "completed": "已经完成", "remaining": "接下来要去", "no_items": "当前计划里还没有景点安排。",
         "all_done": "太棒了，这趟旅程的计划都完成啦！", "day_short": "第{}天",
-        "expenses": "旅程费用", "planned_spend": "按计划预计",
+        "expenses": "旅程费用", "planned_spend": "按计划预计", "today_expense_total": "今日支出",
         "expense_chart": "支出分类", "expense_chart_empty": "记录支出后，这里会显示分类占比。",
         "expense_chart_hint": "点击饼图查看分类详情。",
         "actual_spend": "已经消费", "projected_spend": "预计总消费",
         "expense_note": "预计总消费 = 第二模块预算总范围 + 补充已支付费用；已支出 = 每日支出 + 补充已支付费用。",
-        "stop_expense": "景点打卡与支出",
+        "stop_expense": "景点支出",
         "add_expense": "记一笔", "expense_category": "支出类型",
         "expense_amount": "金额（元）", "expense_amount_required": "请填写大于 0 的金额，然后点击「记一笔」。",
         "save_expense": "添加支出", "no_expenses": "该景点还没有记录支出。",
@@ -61,14 +60,13 @@ TEXT = {
         "checkin_action": "√ 点击打卡", "checked_action": "✓ 已完成",
     },
     "en": {
-        "title": "Hello, Princess Zhou Mengyuan", "subtitle": "Share your ideas with AI and shape a trip that feels clear and unhurried.",
+        "title": "Hello, Princess Jessie", "subtitle": "Share your ideas with AI and shape a trip that feels clear and unhurried.",
         "tab_import": "✈️  AI chat", "tab_itinerary": "🧭  Itinerary", "tab_progress": "✓  Trip progress",
         "tab_settings": "⚙️  Settings", "settings_title": "Preferences",
         "nav_itinerary": "Itinerary", "nav_progress": "Progress", "nav_settings": "Settings", "back_to_chat": "Back",
         "language_label": "Display language", "language_help": "Choose your preferred interface language.",
         "import_title": "Hi, I'm your travel buddy", "import_desc": "Tell me where you'd like to go and when. I'll help make the trip easy to follow.",
         "placeholder": "Where would you like to go? Share dates, budget, or travel style…",
-        "chat_reply": "Your itinerary draft is ready. Tell me what you'd like to change, or open Itinerary to see the details.",
         "missing_api": "Set ARK_API_KEY and ARK_MODEL_ID in environment variables or Streamlit secrets to use AI planning.",
         "waiting": "Putting your trip together...", "parse_ok": "Your itinerary is ready. Explore it in Itinerary.",
         "parse_error": "Could not parse the itinerary", "configure": "Setup: add ARK_API_KEY and ARK_MODEL_ID to environment variables or Streamlit secrets.",
@@ -83,12 +81,12 @@ TEXT = {
         "done_count": "Completed", "left_count": "Remaining", "completion": "Complete", "checklist": "Trip checklist",
         "completed": "Done", "remaining": "Up next", "no_items": "There are no stops in this itinerary yet.",
         "all_done": "Wonderful! You have completed every planned stop.", "day_short": "Day {}",
-        "expenses": "Trip expenses", "planned_spend": "Planned estimate",
+        "expenses": "Trip expenses", "planned_spend": "Planned estimate", "today_expense_total": "Today's total",
         "expense_chart": "Spending breakdown", "expense_chart_empty": "Add expenses to see your spending breakdown.",
         "expense_chart_hint": "Tap a slice to see its details.",
         "actual_spend": "Spent so far", "projected_spend": "Projected total",
         "expense_note": "Projected total = itinerary budget range + additional paid costs; spent so far = daily expenses + additional paid costs.",
-        "stop_expense": "Stop check-in & expenses",
+        "stop_expense": "Attraction expenses",
         "add_expense": "Add", "expense_category": "Category",
         "expense_amount": "Amount (RMB)", "expense_amount_required": "Enter an amount greater than 0, then select Add.",
         "save_expense": "Add expense", "no_expenses": "No expenses recorded for this stop.",
@@ -100,14 +98,13 @@ TEXT = {
         "checkin_action": "√ Check in", "checked_action": "✓ Completed",
     },
     "id": {
-        "title": "Halo, Putri Zhou Mengyuan", "subtitle": "Ceritakan keinginanmu kepada AI dan susun perjalanan yang nyaman dan jelas.",
+        "title": "Halo, Putri Jessie", "subtitle": "Ceritakan keinginanmu kepada AI dan susun perjalanan yang nyaman dan jelas.",
         "tab_import": "✈️  Chat AI", "tab_itinerary": "🧭  Itinerary", "tab_progress": "✓  Progres perjalanan",
         "tab_settings": "⚙️  Pengaturan", "settings_title": "Preferensi",
         "nav_itinerary": "Itinerary", "nav_progress": "Progres", "nav_settings": "Pengaturan", "back_to_chat": "Kembali",
         "language_label": "Bahasa antarmuka", "language_help": "Pilih bahasa yang ingin digunakan di antarmuka.",
         "import_title": "Hai, aku teman perjalananmu", "import_desc": "Ceritakan tujuan dan tanggal perjalananmu. Aku akan membantu menyusun rencana yang nyaman.",
         "placeholder": "Mau pergi ke mana? Ceritakan tanggal, anggaran, atau gaya perjalananmu…",
-        "chat_reply": "Draf itinerary sudah siap. Ceritakan apa yang ingin diubah, atau buka Itinerary untuk melihat detailnya.",
         "missing_api": "Atur ARK_API_KEY dan ARK_MODEL_ID di variabel lingkungan atau Streamlit secrets untuk menggunakan AI.",
         "waiting": "Sedang menyusun perjalananmu...", "parse_ok": "Itinerary siap. Lihat di halaman Itinerary.",
         "parse_error": "Gagal menguraikan itinerary", "configure": "Pengaturan: tambahkan ARK_API_KEY dan ARK_MODEL_ID ke variabel lingkungan atau Streamlit secrets.",
@@ -123,11 +120,12 @@ TEXT = {
         "completed": "Sudah selesai", "remaining": "Berikutnya", "no_items": "Belum ada tempat dalam itinerary ini.",
         "all_done": "Hebat! Semua tempat yang direncanakan sudah selesai.", "day_short": "Hari {}",
         "expenses": "Pengeluaran perjalanan", "planned_spend": "Perkiraan rencana",
+        "today_expense_total": "Total pengeluaran hari ini",
         "expense_chart": "Rincian pengeluaran", "expense_chart_empty": "Catat pengeluaran untuk melihat rinciannya.",
         "expense_chart_hint": "Ketuk bagian diagram untuk melihat rinciannya.",
         "actual_spend": "Sudah dibelanjakan", "projected_spend": "Perkiraan total",
         "expense_note": "Total perkiraan = rentang anggaran itinerary + biaya tambahan yang sudah dibayar; pengeluaran = pengeluaran harian + biaya tambahan yang sudah dibayar.",
-        "stop_expense": "Check-in & pengeluaran tempat", "add_expense": "Tambah",
+        "stop_expense": "Pengeluaran tempat wisata", "add_expense": "Tambah",
         "expense_category": "Jenis pengeluaran",
         "expense_amount": "Jumlah (RMB)", "expense_amount_required": "Masukkan jumlah lebih dari 0, lalu pilih Tambah.",
         "save_expense": "Tambah pengeluaran", "no_expenses": "Belum ada pengeluaran di tempat ini.",
@@ -198,8 +196,8 @@ st.markdown(
     }
     .st-key-return_to_chat {
       position: fixed;
-      right: max(1rem, env(safe-area-inset-right));
-      bottom: max(1rem, env(safe-area-inset-bottom));
+      left: max(1rem, env(safe-area-inset-left));
+      top: max(1rem, env(safe-area-inset-top));
       z-index: 1000;
       width: auto !important;
     }
@@ -213,6 +211,36 @@ st.markdown(
     }
     .st-key-return_to_chat button:hover { background: #e83f72; border-color: #e83f72; color: white; }
     [data-testid="stMetric"] { background: rgba(255,255,255,.9); border: 1px solid #f2d8e6; border-radius: 18px; padding: 16px 18px; }
+    .spend-metric {
+      container-type: inline-size;
+      box-sizing: border-box;
+      width: 100%;
+      height: 5.25rem;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: .35rem;
+      overflow: hidden;
+      background: rgba(255,255,255,.9);
+      border: 1px solid #f2d8e6;
+      border-radius: 18px;
+    }
+    .spend-metric-label {
+      overflow: hidden;
+      color: #313131;
+      font-size: .9rem;
+      line-height: 1.3;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .spend-metric-value {
+      color: #313131;
+      font-size: clamp(.6rem, calc(100cqi / var(--value-length) * 2.1), 1.5rem);
+      font-weight: 400;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
     div.stButton > button[kind="primary"] { background: #ff4f81; border-color: #ff4f81; border-radius: 14px; padding: .65rem 1.15rem; }
     div.stButton > button[kind="primary"]:hover { background: #e83f72; border-color: #e83f72; }
     div[data-testid="stButton"] > button[kind="primary"] { color: #fff !important; }
@@ -275,6 +303,37 @@ st.markdown(
       padding: .9rem 1rem;
       background: rgba(255, 245, 250, .82);
     }
+    div[data-testid="stExpander"] details summary strong {
+      font-size: 1.2em;
+      font-weight: 800;
+    }
+    div[data-testid="stExpander"] details summary [data-testid="stMarkdownContainer"] {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      column-gap: 1rem;
+    }
+    div[data-testid="stExpander"] details summary [data-testid="stMarkdownContainer"] p {
+      margin: 0;
+    }
+    div[data-testid="stExpander"] details summary [data-testid="stMarkdownContainer"] p:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    div[data-testid="stExpander"] details summary [data-testid="stMarkdownContainer"] p:nth-of-type(2) {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+      font-size: .9em;
+      font-weight: 700;
+    }
+    div[data-testid="stExpander"] details summary [data-testid="stMarkdownContainer"] p:nth-of-type(2) strong {
+      font-size: 1em;
+    }
+    div[data-testid="stExpander"] details summary [data-testid="stMarkdownContainer"] p:nth-of-type(3) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
     div[data-testid="stVerticalBlockBorderWrapper"] {
       border-radius: 20px;
       border: 1px solid rgba(255,255,255,.78);
@@ -285,6 +344,17 @@ st.markdown(
         0 12px 28px rgba(126, 67, 151, .1),
         inset 0 1px 0 rgba(255,255,255,.95),
         inset 0 -1px 0 rgba(255,255,255,.3);
+    }
+    div[data-testid="stVerticalBlock"]:has(
+      > [data-testid="stElementContainer"][class*="st-key-expense_category_"],
+      > [data-testid="stElementContainer"][class*="st-key-custom_category_input_"]
+    ) {
+      border: 1px solid rgba(126, 67, 151, .34) !important;
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255,255,255,.88), rgba(244,235,255,.78));
+      box-shadow:
+        0 8px 20px rgba(94, 58, 126, .12),
+        inset 0 1px 0 rgba(255,255,255,.98);
     }
     [data-testid="stAlert"] {
       border-radius: 18px;
@@ -309,10 +379,11 @@ st.markdown(
         min-width: 0 !important;
       }
       [data-testid="stMetric"] { padding: 12px; }
-      [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) {
+      .spend-metric { padding: 12px; }
+      [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"], .spend-metric) {
         flex-wrap: nowrap !important;
       }
-      [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"])
+      [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"], .spend-metric)
         > [data-testid="stColumn"] {
         min-width: 0 !important;
         width: 0 !important;
@@ -322,6 +393,25 @@ st.markdown(
         [data-testid="stMetricValue"] {
         white-space: nowrap !important;
         font-size: clamp(1.25rem, 6vw, 2rem) !important;
+      }
+      [data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"]):has(
+        [class*="st-key-expense_category_"], [class*="st-key-custom_category_input_"]
+      )
+        > [data-testid="stColumn"]:first-child {
+        flex: .9 1 0% !important;
+      }
+      [data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"]):has(
+        [class*="st-key-expense_category_"], [class*="st-key-custom_category_input_"]
+      )
+        > [data-testid="stColumn"]:nth-child(2) {
+        flex: 1.3 1 0% !important;
+      }
+      [data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"]):has(
+        [class*="st-key-expense_category_"], [class*="st-key-custom_category_input_"]
+      ) {
+        column-gap: .35rem !important;
+        margin-left: .4rem !important;
+        width: calc(100% - .4rem) !important;
       }
       [data-testid="stHorizontalBlock"]:has([data-testid="stVegaLiteChart"]) {
         flex-wrap: nowrap !important;
@@ -353,15 +443,26 @@ st.markdown(
         > [data-testid="stColumn"]:not(:has(.st-key-chat_composer)) {
         display: none !important;
       }
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"]) {
+      div[data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"]) {
+        flex-direction: row !important;
         flex-wrap: nowrap !important;
+        overflow-x: hidden !important;
       }
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"])
-        > [data-testid="stColumn"] {
+      div[data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"])
+        > div[data-testid="stColumn"] {
         min-width: 0 !important;
         flex: 1 1 0% !important;
         width: 0 !important;
-        overflow: hidden !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+      }
+      div[data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"])
+        > div[data-testid="stColumn"] p,
+      div[data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"])
+        > div[data-testid="stColumn"] strong {
+        max-width: 100% !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
       }
       [data-testid="stHorizontalBlock"]:has([class*="st-key-checkin_button_"])
         > [data-testid="stColumn"]:first-child p,
@@ -373,34 +474,93 @@ st.markdown(
         word-break: break-word !important;
       }
       [data-testid="stForm"] [data-testid="stHorizontalBlock"],
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-expense_category_"]),
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-delete_expense_"]) {
+      [data-testid="stHorizontalBlock"]:has(
+        [class*="st-key-expense_category_"], [class*="st-key-custom_category_input_"]
+      ),
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      ) {
         flex-wrap: nowrap !important;
       }
       [data-testid="stForm"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"],
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-expense_category_"])
+      [data-testid="stHorizontalBlock"]:has(
+        [class*="st-key-expense_category_"], [class*="st-key-custom_category_input_"]
+      )
         > [data-testid="stColumn"],
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-delete_expense_"])
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      )
         > [data-testid="stColumn"] {
         min-width: 0 !important;
         flex: 1 1 0% !important;
         width: 0 !important;
       }
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-delete_expense_"])
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      )
         > [data-testid="stColumn"]:nth-child(1) {
-        flex: 1 1 0% !important;
+        flex: .9 1 0% !important;
       }
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-delete_expense_"])
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      )
         > [data-testid="stColumn"]:nth-child(2) {
-        flex: 1 1 0% !important;
+        flex: 1.3 1 0% !important;
       }
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-delete_expense_"])
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      )
         > [data-testid="stColumn"]:nth-child(3) {
-        flex: .35 1 0% !important;
+        flex: 0 0 1.9rem !important;
       }
-      [data-testid="stHorizontalBlock"]:has([class*="st-key-delete_expense_"])
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      ) {
+        column-gap: .35rem !important;
+        margin-left: .4rem !important;
+        width: calc(100% - .4rem) !important;
+      }
+      div[class*="st-key-delete_expense_"] button {
+        width: 1.9rem !important;
+        min-width: 1.9rem !important;
+        min-height: 1.9rem !important;
+        padding: 0 !important;
+        border: 1px solid rgba(232, 63, 114, .28) !important;
+        border-radius: 9px !important;
+        background: rgba(255, 240, 246, .92) !important;
+        color: #e83f72 !important;
+      }
+      div[class*="st-key-delete_expense_"] button p {
+        margin: 0 !important;
+        color: #e83f72 !important;
+        font-size: 1.15rem !important;
+        line-height: 1 !important;
+      }
+      .expense-empty {
+        display: flex;
+        align-items: center;
+        min-height: 2.55rem;
+        margin-left: .4rem;
+        width: calc(100% - .4rem);
+        box-sizing: border-box;
+        color: #806b91;
+        font-size: .85rem;
+        line-height: 1.5;
+      }
+      [data-testid="stMarkdownContainer"]:has(> .expense-empty) {
+        margin-bottom: 0 !important;
+      }
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      )
         p {
         white-space: nowrap;
+      }
+      [data-testid="stHorizontalBlock"]:has(
+        > [data-testid="stColumn"]:nth-child(3) [class*="st-key-delete_expense_"]
+      ) {
+        min-height: 2.55rem;
+        align-items: center;
       }
     }
     </style>
@@ -558,7 +718,6 @@ string is valid JSON, escape embedded quotation marks, and do not truncate the J
         ],
         "temperature": 0.1,
         "response_format": {"type": "json_object"},
-        "max_tokens": 4096
     }
     response = requests.post(ENDPOINT, headers=headers, json=payload, timeout=60)
     response.raise_for_status()
@@ -596,18 +755,16 @@ string is valid JSON, escape embedded quotation marks, and do not truncate the J
 
 
 if st.session_state["active_module"] == "chat":
-    if not st.session_state["chat_history"]:
-        st.markdown(
-            f"""
-            <div class="chat-welcome">
-              <div class="chat-badge">YOUR TRAVEL BUDDY</div>
-              <h2>{T['import_title']}</h2>
-              <p>{T['import_desc']}</p>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-    chat_messages = st.container()
+    st.markdown(
+        f"""
+        <div class="chat-welcome">
+          <div class="chat-badge">YOUR TRAVEL BUDDY</div>
+          <h2>{T['import_title']}</h2>
+          <p>{T['import_desc']}</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     spot_columns = st.columns([1.1, 0.9], gap="large", wrap=False)
     with spot_columns[0]:
         submitted_prompt = st.chat_input(T["placeholder"], key="chat_composer")
@@ -629,9 +786,6 @@ if st.session_state["active_module"] == "chat":
         if not ARK_API_KEY or not MODEL_ID:
             st.error(T["missing_api"])
             st.caption(T["configure"])
-            st.session_state["chat_history"].append(
-                {"role": "assistant", "content": T["missing_api"]}
-            )
         else:
             try:
                 previous_requests = [
@@ -664,20 +818,8 @@ if st.session_state["active_module"] == "chat":
                     "accommodation": 0.0,
                 }
                 st.success(T["parse_ok"])
-                st.session_state["chat_history"].append(
-                    {"role": "assistant", "content": T["chat_reply"]}
-                )
             except (requests.RequestException, ValueError, KeyError, TypeError) as error:
                 st.error(f"{T['parse_error']}: {error}")
-                st.session_state["chat_history"].append(
-                    {"role": "assistant", "content": f"{T['parse_error']}: {error}"}
-                )
-
-    with chat_messages:
-        for message in st.session_state["chat_history"]:
-            avatar = "✈️" if message["role"] == "assistant" else "🙂"
-            with st.chat_message(message["role"], avatar=avatar):
-                st.write(message["content"])
 
 
 def save_language_preference():
@@ -767,9 +909,12 @@ def render_item_expenses(day_index, item_index):
             st.rerun()
 
     if not day_expenses:
-        st.caption(T["no_expenses"])
+        st.markdown(
+            f'<div class="expense-empty">{escape(T["no_expenses"])}</div>',
+            unsafe_allow_html=True,
+        )
     for expense in day_expenses:
-        expense_columns = st.columns([1, 0.8, 0.35])
+        expense_columns = st.columns([0.9, 1.3, 0.25])
         category_label = expense_categories[expense["category"]]
         if expense["category"] == "other" and expense.get("custom_category"):
             category_label = expense["custom_category"]
@@ -792,10 +937,21 @@ if st.session_state["active_module"] == "itinerary":
             day_title = T["day"].format(day_data.get("day_no", day_index + 1))
             date_text = day_data.get("date_text", "")
             start_location = day_data.get("start_location", "")
-            header_parts = [part for part in (day_title, date_text) if part]
+            day_header = " · ".join(part for part in (day_title, date_text) if part)
+            day_total = sum(
+                expense["amount"]
+                for expense in st.session_state["travel_expenses"]
+                if expense["day_index"] == day_index
+            )
+            total_label = f"{T['today_expense_total']}: ¥{day_total:,.2f}"
             if start_location:
-                header_parts.append(f"{T['start']}: {start_location}")
-            with st.expander(" · ".join(header_parts), expanded=True):
+                expander_label = (
+                    f"**{day_header}**\n\n**{total_label}**\n\n"
+                    f"{T['start']}: {start_location}"
+                )
+            else:
+                expander_label = f"**{day_header}**\n\n**{total_label}**"
+            with st.expander(expander_label, expanded=True):
                 items = day_data.get("plan_items", [])
                 for item_index, item in enumerate(items):
                     place = item.get(place_fields[lang]) or item.get("place_en") or item.get("place_cn", "")
@@ -902,7 +1058,13 @@ if st.session_state["active_module"] == "progress":
             else "—"
         )
         expense_metrics = st.columns(2, gap="large")
-        expense_metrics[0].metric(T["projected_spend"], projected_display)
+        expense_metrics[0].markdown(
+            f'<div class="spend-metric" role="group" aria-label="{escape(T["projected_spend"])}">'
+            f'<div class="spend-metric-label">{escape(T["projected_spend"])}</div>'
+            f'<div class="spend-metric-value" style="--value-length:{len(projected_display)}">'
+            f'{escape(projected_display)}</div></div>',
+            unsafe_allow_html=True,
+        )
         expense_metrics[1].metric(T["actual_spend"], f"¥{actual_total:,.2f}")
         for day_index, item_index, day_data, item in all_items:
             key = f"done_{revision}_{day_index}_{item_index}"
